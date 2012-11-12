@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			body {
+				font-family:arial,sans-serif;
+				font-size:14px;
+				color:#333;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="cart">
+			<ul><li>fsdfds</li></ul>
+			<p>Total <span id="product">0</span> productos</p>
+			<ul class="items">
+				<li>uno</li>
+				<li>dos</li>
+			</ul>
+
+			<p>Total en tu cesta <span id="total_price">0</span> €</p>
+			<p class="alerts"></p>
+		</div>
+		
+	</body>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="cart.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('#cart').cart({build_item:function(name,price,quantity){
+				return '<h1>'+name+'</h1>'+"<h2>"+price+"</h2>";
+			}});
+			window.cart = $("#cart").data("cart");
+			window.cart.total_product(10);
+			window.cart.total_price(60000);
+			window.cart.add_product({
+				name:'New Caro',
+				price:'155 €',
+				quantity:10
+
+			});
+			window.cart.add_product({
+				name:'Carhart pantaca',
+				price:'100 €',
+				quantity:1
+			});
+
+			window.cart.add_product({
+				name:'ivan pantaca',
+				price:'36 €',
+				quantity:2
+			});
+
+			window.cart.add_product({
+				name:'Carhart chupa',
+				price:'200 €',
+				quantity:1
+			});
+
+			//window.cart.delete_product('.item2');
+
+		});
+	</script>
+</html>				

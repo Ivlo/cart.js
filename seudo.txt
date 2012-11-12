@@ -1,0 +1,18 @@
+- Creo la estructura del plugin
+- Necesito saber el número de productos que tengo en el carrito
+- Necesito saber el precio total de mi carrito
+- Añadir producto (precio,nombre y cantidad)
+- Borrar un producto llamando a un metodo
+- LLamo a un metodo para actualizar los productos.
+- LLamo a un metodo para actualizar el precio total del carrito.
+
+Hacer update product con el objeto jquery y el número.
+
+Añadir un producto le paso:
+- Precio
+- Nombre
+- Cantidad
+
+Update product
+
+Tengo que hacer que cada item de producto sea único y con ese id único luego sea mediante el que borre
